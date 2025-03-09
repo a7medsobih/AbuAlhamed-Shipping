@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شركة أبوالحمد للشحن</title>
+    <link rel="icon" type="image/png" href="assets/IMG/icon.png"/>
+    <link rel="stylesheet" href="assets/CSS/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="box">
+                <a class="cta-button" href="#quote">اطلب عرض سعر</a>
+            </div>
+
+            <!-- أيقونة الـ Hamburger Menu -->
+            <div class="menu-icon" id="menuIcon">
+                <i class="fas fa-bars"></i>
+                <nav class="drop-menu" id="navMenu">
+                    <ul>
+                        <li><a href="#home">الرئيسية</a></li>
+                        <li><a href="#about">من نحن</a></li>
+                        <li><a href="#services">خدماتنا</a></li>
+                        <li><a href="#">اتصل بنا</a></li>
+                        <li><a href="#">تتبع الشحنة</a></li>
+                        <li><a class="quote" href="#quote">اطلب عرض سعر</a> </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <nav id="navMenu">
+                <ul>
+                    <li><a href="#home">الرئيسية</a></li>
+                    <li><a href="#about">من نحن</a></li>
+                    <li><a href="#services">خدماتنا</a></li>
+                    <li><a href="#">اتصل بنا</a></li>
+                    <li><a href="#">تتبع الشحنة</a></li>
+                </ul>
+            </nav>
+
+            <div class="logo">
+                <img src="assets/IMG/logo.jpg" alt="شركة أبوالحمد للشحن">
+            </div>
+            
+        </div>
+    </header>
+
+    <section class="main-banner" id="home">
+        <!-- video -->
+        
+        <video autoplay muted loop id="bannerVideo">
+            <source src="assets/IMG/" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    
+        <!-- Overlay -->
+        <div class="overlay"></div>
+    
+        <!-- المحتوى -->
+        <div class="banner-content">
+            <h1>شركة أبوالحمد للشحن</h1>
+            <h2>السرعة والأمان في كل شحنة</h2>
+            <p>نقدم لكم خدمات شحن سريعة وآمنة بأسعار تنافسية. تواصل معنا الآن!</p>
+            <div class="cta-buttons">
+                <a href="#quote" class="cta-button">اطلب عرض سعر</a>
+                <a href="#" class="cta-button secondary">تتبع شحنتك</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- start about -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="content">
+                <h2>شركتنا</h2>
+                <p>منذ بدايه الشركه تهدف إلى تطوير خدمات الشحن والتخليص الجمركي و كافة الخدمات المساعدة وتقديم خدمات الدعم والمشورة لشركائنا والعمل المستمر على رفع كفاءة الخدمة وتزويدها بأحدث الأساليب وتطوير وتحسين الخدمة وتقوية أداء الفريق من خلال التدريب المستمر وتقديم خدمة الشحن الدولي بأسعار تنافسيةوتحسين قدرتها على المنافسة.</p>
+            </div>
+
+            <div class="stats">
+                <div class="stat-item">
+                    <div class="circle">
+                        <i class="fas fa-globe"></i>
+                        <h3 data-target="50" data-suffix="+">0</h3>
+                        <p>دول تم الشحن لها</p>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <div class="circle">
+                        <i class="fas fa-ship"></i>
+                        <h3 data-target="10000" data-suffix="+">0</h3>
+                        <p>شحنة ناجحة</p>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <div class="circle">
+                        <i class="fas fa-clock"></i>
+                        <h3 data-target="98" data-suffix="%">0</h3>
+                        <p>نسبة التسليم في الوقت المحدد</p>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <div class="circle">
+                        <i class="fas fa-briefcase"></i>
+                        <h3 data-target="500" data-suffix="+">0</h3>
+                        <p>شركة وثقت فينا</p>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <a class="cta-button" href="#quote">اطلب عرض سعر</a>
+            </div>
+        </div>
+    </section>
+    <!-- end about -->
+    
+    <!-- start service -->
+    <section class="services-section" id="services">
+        <div class="container">
+            <div class="content">
+                <h2>خدماتنا</h2>
+                <p>نقدم لكم مجموعة واسعة من خدمات الشحن والتخليص الجمركي بأسعار تنافسية وجودة عالية.</p>
+            </div>
+    
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3>الشحن البري</h3>
+                    <p>نقدم خدمات شحن بري سريعة وآمنة داخل وخارج البلاد. نضمن وصول البضائع في الوقت المحدد وبأعلى معايير الجودة. فريقنا المدرب جيدًا يعمل على توفير أفضل الحلول اللوجستية.</p>
+                    <a href="#" class="cta-button button-white">تعرف أكثر</a>
+                </div>
+                <div class="service-card">
+                    <div class="icon">
+                        <i class="fas fa-plane"></i>
+                    </div>
+                    <h3>الشحن الجوي</h3>
+                    <p>شحن جوي سريع وموثوق به لأي مكان في العالم. نضمن وصول البضائع بأمان وسرعة مع تتبع دقيق للشحنات. نتعامل مع أكبر شركات الطيران لتقديم أفضل الخدمات.</p>
+                    <a href="#" class="cta-button button-white">تعرف أكثر</a>
+                </div>
+                <div class="service-card">
+                    <div class="icon">
+                        <i class="fas fa-ship"></i>
+                    </div>
+                    <h3>الشحن البحري</h3>
+                    <p>شحن بحري اقتصادي مع ضمان وصول البضائع بسلام. نقدم حلول شحن بحري متكاملة مع توفير خدمات التخزين والتوزيع. نتعامل مع أكبر الموانئ العالمية.</p>
+                    <a href="#" class="cta-button button-white">تعرف أكثر</a>
+                </div>
+                <div class="service-card">
+                    <div class="icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3>تخليص جمركي</h3>
+                    <p>خدمات تخليص جمركي سريعة ودقيقة بأسعار تنافسية. نضمن إتمام الإجراءات الجمركية في أسرع وقت ممكن. فريقنا المتخصص يعمل على توفير أفضل الحلول الجمركية.</p>
+                    <a href="#" class="cta-button button-white">تعرف أكثر</a>
+                </div>
+                <div class="service-card">
+                    <div class="icon">
+                        <i class="fas fa-box-open"></i>
+                    </div>
+                    <h3>التصدير لحساب الغير</h3>
+                    <p>خدمات تصدير متكاملة مع توفير الدعم اللوجستي الكامل. نضمن وصول البضائع إلى وجهتها النهائية بأمان وسرعة. نقدم حلول تصدير مخصصة تناسب احتياجاتك.</p>
+                    <a href="#" class="cta-button button-white">تعرف أكثر</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end service -->
+
+    <!-- start slider -->
+    <section>
+        <div class="community-slider">
+            <div class="overlay" data-aos="fade-in" data-aos-delay="300">
+                <h2 class="overlay-title">جودة عالية</h2>
+                <p class="overlay-description">
+                    نضمن تقديم خدمات بجودة عالية تلبي توقعات عملائنا.
+                </p>
+            </div>
+        </div>
+    </section>
+    <!-- end slider -->
+
+    <!-- <section class="why-choose-us">
+        <div class="container">
+            <div class="content">
+                <h2>لماذا تختارنا؟</h2>
+                <p>نحن نقدم أفضل الحلول اللوجستية بأسعار تنافسية وجودة عالية. هنا بعض الأسباب التي تجعلنا الخيار الأول لعملائنا.</p>
+            </div>
+    
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="icon">
+                        <i class="fas fa-check-circle"></i>
+                    </div>
+                    <h3>جودة عالية</h3>
+                    <p>نضمن تقديم خدمات بجودة عالية تلبي توقعات عملائنا.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>سرعة في التنفيذ</h3>
+                    <p>نقدم خدمات سريعة وفعالة لتلبية احتياجات عملائنا في الوقت المحدد.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">
+                        <i class="fas fa-hand-holding-usd"></i>
+                    </div>
+                    <h3>أسعار تنافسية</h3>
+                    <p>نقدم خدماتنا بأسعار تنافسية تناسب جميع العملاء.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>دعم فني متكامل</h3>
+                    <p>فريق دعم فني متاح على مدار الساعة لمساعدتك في أي استفسار.</p>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Start Testimonials Section -->
+    <section class="testimonials-section" id="testimonials">
+        <div class="container">
+            <div class="content">
+                <h2>آراء عملائنا</h2>
+                <p>نحن نفتخر بثقة عملائنا فينا. هنا بعض الآراء الحقيقية من عملائنا الكرام.</p>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="client-info">
+                        <img src="assets/IMG/client1.jpg" alt="Client 1">
+                        <div class="info-text">
+                            <h3>محمد أحمد</h3>
+                            <p class="title">مدير شركة</p>
+                        </div>
+                    </div>
+
+                    <div class="rate">
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star filled"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "شركة أبوالحمد للشحن قدمت لي أفضل خدمة شحن سريعة وآمنة. أنصح الجميع بالتعامل معهم."
+                    </p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="client-info">
+                        <img src="assets/IMG/client1.jpg" alt="Client 1">
+                        <div class="info-text">
+                            <h3>أحمد محمود</h3>
+                            <p class="title">رجل أعمال</p>
+                        </div>
+                    </div>
+
+                    <div class="rate">
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star filled"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "خدمات التخليص الجمركي كانت سريعة ودقيقة. شكرًا لفريق العمل المحترف."
+                    </p>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="client-info">
+                        <img src="assets/IMG/client1.jpg" alt="Client 1">
+                        <div class="info-text">
+                            <h3>سارة خالد</h3>
+                            <p class="title">مديرة تسويق</p>
+                        </div>
+                    </div>
+
+                    <div class="rate">
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star filled"></i>
+                        <i class="fas fa-star filled"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">
+                        "الشحن الجوي كان سريعًا وموثوقًا به. أنا سعيدة جدًا بالخدمة المقدمة."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Testimonials Section -->
+
+    <!-- Start Request a Quote Section -->
+    <section class="request-quote-section" id="quote">
+        <div class="container">
+            <div class="content">
+                <h2>اطلب عرض سعر</h2>
+                <p>املأ النموذج أدناه وسنقوم بالاتصال بك لتقديم عرض سعر لشحنتك.</p>
+            </div>
+
+            <form class="quote-form" action="/submit-quote" method="POST">
+                <div class="form-group">
+                    <label for="name">الاسم الكامل</label>
+                    <input type="text" id="name" name="name" placeholder="أدخل اسمك الكامل" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">البريد الإلكتروني</label>
+                    <input type="email" id="email" name="email" placeholder="أدخل بريدك الإلكتروني" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">رقم الهاتف</label>
+                    <input type="number" id="phone" name="phone" placeholder="أدخل رقم هاتفك" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="service">نوع الخدمة المطلوبة</label>
+                    <select id="service" name="service" required>
+                        <option value="" disabled selected>اختر نوع الخدمة</option>
+                        <option value="shipping">الشحن البري</option>
+                        <option value="air">الشحن الجوي</option>
+                        <option value="sea">الشحن البحري</option>
+                        <option value="customs">التخليص الجمركي</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">تفاصيل إضافية</label>
+                    <textarea id="message" name="message" placeholder="أدخل تفاصيل إضافية عن شحنتك"></textarea>
+                </div>
+
+                <a type="submit" class="cta-button">إرسال الطلب</a>
+            </form>
+        </div>
+    </section>
+    <!-- End Request a Quote Section -->
+
+    <!-- Start Latest Blog Posts Section -->
+    <section class="latest-blog-posts" id="posts">
+        <div class="container">
+            <div class="content">
+                <h2>أحدث المقالات</h2>
+                <p>ابقَ على اطلاع بأحدث المقالات والنصائح في عالم الشحن والخدمات اللوجستية.</p>
+            </div>
+
+            <div class="blog-grid">
+                <!-- Blog Item 1 -->
+                <div class="blog-item">
+                    <div class="blog-image">
+                        <img src="assets/IMG/blog1.jpg" alt="Blog 1">
+                    </div>
+                    <div class="blog-content">
+                        <h3 class="blog-title">عنوان المقال الأول</h3>
+                        <p class="blog-date">نشر في: أكتوبر 10, 2025</p>
+                        <p class="blog-excerpt">
+                            هذا نص مختصر للمقال الأول. يمكنك هنا وضع ملخص قصير للمقال لجذب انتباه القارئ.
+                        </p>
+                        <a href="#" class="cta-button button-white">اقرأ المزيد</a>
+                    </div>
+                </div>
+
+                <!-- Blog Item 2 -->
+                <div class="blog-item">
+                    <div class="blog-image">
+                        <img src="assets/IMG/blog2.jpg" alt="Blog 2">
+                    </div>
+                    <div class="blog-content">
+                        <h3 class="blog-title">عنوان المقال الثاني</h3>
+                        <p class="blog-date">نشر في: سبتمبر 25, 2025</p>
+                        <p class="blog-excerpt">
+                            هذا نص مختصر للمقال الثانى. يمكنك هنا وضع ملخص قصير للمقال لجذب انتباه القارئ.
+                        </p>
+                        <a href="#" class="cta-button button-white">اقرأ المزيد</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End Latest Blog Posts Section -->
+
+    <!-- Start Footer -->
+    <footer class="footer">
+        <div class="container">
+            <!-- Box 1 -->
+            <div class="box">
+                <h3>شركة أبوالحمد للشحن</h3>
+                <ul class="social">
+                    <li>
+                        <a href="#" class="facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="youtube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#" class="instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
+                </ul>
+                <p class="text">
+                    نقدم لكم خدمات شحن سريعة وآمنة بأسعار تنافسية. تواصل معنا الآن!
+                </p>
+            </div>
+
+            <!-- Box 2 -->
+            <div class="box">
+                <ul class="links">
+                    <li><a href="#home">الرئيسية</a></li>
+                    <li><a href="#about">من نحن</a></li>
+                    <li><a href="#services">خدماتنا</a></li>
+                    <li><a href="#testimonials">آراء العملاء</a></li>
+                    <li><a href="#quote">اطلب عرض سعر</a></li>
+                </ul>
+            </div>
+
+            <!-- Box 3 -->
+            <div class="box">
+                <div class="line">
+                    <i class="fas fa-map-marker-alt fa-fw"></i>
+                    <div class="info">15 شارع متولي الشعراوي، الحي العاشر، مدينة نصر</div>
+                </div>
+                <div class="line">
+                    <i class="fas fa-phone-volume fa-fw"></i>
+                    <div class="info">
+                        <span>01015805018 </span>
+                        <span>- 01070295044</span>
+                    </div>
+                </div>
+                <div class="line">
+                    <i class="fab fa-whatsapp fa-fw"></i>
+                    <div class="info">01015805018</div>
+                </div>
+                <div class="line">
+                    <i class="fas fa-envelope fa-fw"></i>
+                    <div class="info">omar_apoalhamed@yahoo.com</div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- حقوق النشر -->
+        <p class="copyright">Powered By: <a href="https://ideaworldweb.com/" target="_blank">Idea World Web</a> | Copyright &copy; Apoo Alhamed 2025</p>
+    </footer>
+    <!-- End Footer -->
+
+    <!-- jQuery -->
+    <script src="assets/JS/jquery-3.7.1.min (1).js"></script>
+    <script src="assets/JS/main.js"></script>
+</body>
+</html>
