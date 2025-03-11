@@ -24,9 +24,7 @@ document.addEventListener("click", function (event) {
   }
 });
 
-
 $(document).ready(function () {
-
   // Start about Section
   const observer = new IntersectionObserver(
     (entries) => {
@@ -67,13 +65,13 @@ $(document).ready(function () {
   }
   // End about Section
 
-// startt slider  
+  // startt slider
   let images = [
     "assets/IMG/image1.jpg",
     "assets/IMG/image2.jpg",
     "assets/IMG/image3.jpg",
     "assets/IMG/image4.jpg",
-  ]; 
+  ];
   let titles = [
     "جودة عالية",
     "سرعة في التنفيذ",
@@ -106,7 +104,46 @@ $(document).ready(function () {
   }
 
   setInterval(moveToNextSlide, 5000); // تغيير الصورة كل 5 ثواني
-// End slider
- 
-});
+  // End slider
 
+  $("ul li a, .goToQuote").click(function (e) {
+    e.preventDefault(); 
+    // console.log('.' + $(this).data('scroll'));
+
+    // scrolling navbar
+    $("html ,body").animate(
+      {
+        scrollTop: $("." + $(this).data("scroll")).offset().top + 1,
+      },
+      1000
+    );
+  });
+
+  $(window).on("scroll", function () {
+    var sc = $(window).scrollTop();
+    // console.log(sc);
+    var buttonUp = $(".buttonUp");
+    var whatsappButton = $(".whatsapp");
+    if (sc >= 634) {
+      buttonUp.fadeIn();
+    } else {
+      buttonUp.fadeOut();
+    }
+    if (sc >= 250) {
+      whatsappButton.fadeIn();
+    } else {
+      whatsappButton.fadeOut();
+    }
+  });
+
+  // scroll to top
+  $(".buttonUp").click(function () {
+    $("html, body").animate(
+      {
+        scrollTop: 0,
+      },
+      1000
+    );
+  });
+});
+AOS.init();

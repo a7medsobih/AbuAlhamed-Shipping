@@ -9,71 +9,74 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap">
     <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 <body>
     <header>
         <div class="container">
             <div class="box">
-                <a class="cta-button" href="#quote">اطلب عرض سعر</a>
+                <a class="cta-button button-white goToQuote" href="#" data-scroll="quote">اطلب عرض سعر</a>
             </div>
 
             <!-- أيقونة الـ Hamburger Menu -->
             <div class="menu-icon" id="menuIcon">
                 <i class="fas fa-bars"></i>
-                <nav class="drop-menu" id="navMenu">
+                <nav class="drop-menu" id="navMenu" data-aos="fade-down">
                     <ul>
-                        <li><a href="#home">الرئيسية</a></li>
-                        <li><a href="#about">من نحن</a></li>
-                        <li><a href="#services">خدماتنا</a></li>
+                        <li><a href="#" data-scroll="home">الرئيسية</a></li>
+                        <li><a href="#" data-scroll="about">من نحن</a></li>
+                        <li><a href="#" data-scroll="services" >خدماتنا</a></li>
                         <li><a href="#">اتصل بنا</a></li>
                         <li><a href="#">تتبع الشحنة</a></li>
-                        <li><a class="quote" href="#quote">اطلب عرض سعر</a> </li>
+                        <li><a class="quote1" href="#" data-scroll="quote">اطلب عرض سعر</a> </li>
                     </ul>
                 </nav>
             </div>
 
-            <nav id="navMenu">
+            <nav>
                 <ul>
-                    <li><a href="#home">الرئيسية</a></li>
-                    <li><a href="#about">من نحن</a></li>
-                    <li><a href="#services">خدماتنا</a></li>
+                    <li><a href="#" data-scroll="home">الرئيسية</a></li>
+                    <li><a href="#" data-scroll="about" >من نحن</a></li>
+                    <li><a href="#" data-scroll="services">خدماتنا</a></li>
                     <li><a href="#">اتصل بنا</a></li>
                     <li><a href="#">تتبع الشحنة</a></li>
                 </ul>
             </nav>
 
-            <div class="logo">
+            <div class="logo" data-aos="fade-down">
                 <img src="assets/IMG/logo.jpg" alt="شركة أبوالحمد للشحن">
             </div>
             
         </div>
     </header>
 
-    <section class="main-banner" id="home">
-        <!-- video -->
+    <section class="main-banner home" >
+        <div class="banner-image" style="background-image: url('assets/IMG/banner-2.jpg');"></div>
         
-        <video autoplay muted loop id="bannerVideo">
-            <source src="assets/IMG/" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    
-        <!-- Overlay -->
-        <div class="overlay"></div>
-    
-        <!-- المحتوى -->
         <div class="banner-content">
             <h1>شركة أبوالحمد للشحن</h1>
             <h2>السرعة والأمان في كل شحنة</h2>
             <p>نقدم لكم خدمات شحن سريعة وآمنة بأسعار تنافسية. تواصل معنا الآن!</p>
             <div class="cta-buttons">
-                <a href="#quote" class="cta-button">اطلب عرض سعر</a>
+                <a href="#" class="cta-button goToQuote" data-scroll="quote">اطلب عرض سعر</a>
                 <a href="#" class="cta-button secondary">تتبع شحنتك</a>
             </div>
         </div>
     </section>
 
+    <div class="buttonUp">
+        <i class="fa-solid fa-angles-up"></i>
+    </div>
+    
+    <!-- whatsapp button -->
+    <div class="whatsapp">
+        <a href="https://wa.me/01015805018" class="whatsapp-button" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+    </div>
+
     <!-- start about -->
-    <section class="about-section" id="about">
+    <section class="about-section about">
         <div class="container">
             <div class="content">
                 <h2>شركتنا</h2>
@@ -112,14 +115,14 @@
             </div>
 
             <div>
-                <a class="cta-button" href="#quote">اطلب عرض سعر</a>
+                <a class="cta-button goToQuote" href="#" data-scroll="quote">اطلب عرض سعر</a>
             </div>
         </div>
     </section>
     <!-- end about -->
     
     <!-- start service -->
-    <section class="services-section" id="services">
+    <section class="services-section services">
         <div class="container">
             <div class="content">
                 <h2>خدماتنا</h2>
@@ -226,7 +229,7 @@
     </section> -->
 
     <!-- Start Testimonials Section -->
-    <section class="testimonials-section" id="testimonials">
+    <section class="testimonials-section testimonials">
         <div class="container">
             <div class="content">
                 <h2>آراء عملائنا</h2>
@@ -302,7 +305,7 @@
     <!-- End Testimonials Section -->
 
     <!-- Start Request a Quote Section -->
-    <section class="request-quote-section" id="quote">
+    <section class="request-quote-section quote">
         <div class="container">
             <div class="content">
                 <h2>اطلب عرض سعر</h2>
@@ -426,11 +429,11 @@
             <!-- Box 2 -->
             <div class="box">
                 <ul class="links">
-                    <li><a href="#home">الرئيسية</a></li>
-                    <li><a href="#about">من نحن</a></li>
-                    <li><a href="#services">خدماتنا</a></li>
-                    <li><a href="#testimonials">آراء العملاء</a></li>
-                    <li><a href="#quote">اطلب عرض سعر</a></li>
+                    <li><a href="#" data-scroll="home">الرئيسية</a></li>
+                    <li><a href="#" data-scroll="about">من نحن</a></li>
+                    <li><a href="#" data-scroll="services">خدماتنا</a></li>
+                    <li><a href="#" data-scroll="testimonials">آراء العملاء</a></li>
+                    <li><a href="#" data-scroll="quote">اطلب عرض سعر</a></li>
                 </ul>
             </div>
 
@@ -459,11 +462,12 @@
 
         </div>
 
-        <!-- حقوق النشر -->
-        <p class="copyright">Powered By: <a href="https://ideaworldweb.com/" target="_blank">Idea World Web</a> | Copyright &copy; Apoo Alhamed 2025</p>
+        <!-- copyright -->
+        <p class="copyright">Powered By: <a href="https://ideaworldweb.com/" target="_blank">Idea World Web</a> | Copyright &copy; apoalhamed 2025</p>
     </footer>
     <!-- End Footer -->
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- jQuery -->
     <script src="assets/JS/jquery-3.7.1.min (1).js"></script>
     <script src="assets/JS/main.js"></script>
