@@ -26,8 +26,7 @@
                         <li><a href="#" data-scroll="home">الرئيسية</a></li>
                         <li><a href="#" data-scroll="about">من نحن</a></li>
                         <li><a href="#" data-scroll="services" >خدماتنا</a></li>
-                        <li><a href="#">اتصل بنا</a></li>
-                        <li><a href="#">تتبع الشحنة</a></li>
+                        <li><a href="#" data-scroll="testimonials">المقالات</a></li>
                         <li><a class="quote1" href="#" data-scroll="quote">اطلب عرض سعر</a> </li>
                     </ul>
                 </nav>
@@ -38,8 +37,7 @@
                     <li><a href="#" data-scroll="home">الرئيسية</a></li>
                     <li><a href="#" data-scroll="about" >من نحن</a></li>
                     <li><a href="#" data-scroll="services">خدماتنا</a></li>
-                    <li><a href="#">اتصل بنا</a></li>
-                    <li><a href="#">تتبع الشحنة</a></li>
+                    <li><a href="#" data-scroll="testimonials">المقالات</a></li>
                 </ul>
             </nav>
 
@@ -51,7 +49,7 @@
     </header>
 
     <section class="main-banner home" >
-        <div class="banner-image" style="background-image: url('assets/IMG/banner-2.jpg');"></div>
+        <div class="banner-image" style="background-image: url('assets/IMG/1202.jpg');"></div>
         
         <div class="banner-content">
             <h1>شركة أبوالحمد للشحن</h1>
@@ -59,7 +57,6 @@
             <p>نقدم لكم خدمات شحن سريعة وآمنة بأسعار تنافسية. تواصل معنا الآن!</p>
             <div class="cta-buttons">
                 <a href="#" class="cta-button goToQuote" data-scroll="quote">اطلب عرض سعر</a>
-                <a href="#" class="cta-button secondary">تتبع شحنتك</a>
             </div>
         </div>
     </section>
@@ -69,9 +66,13 @@
     </div>
     
     <!-- whatsapp button -->
-    <div class="whatsapp">
-        <a href="https://wa.me/01015805018" class="whatsapp-button" target="_blank">
+    <div class="contact-buttons">
+        <a href="https://wa.me/+201015805018" class="whatsapp-button" target="_blank">
             <i class="fa-brands fa-whatsapp"></i>
+        </a>
+
+        <a href="tel:+201015805018" class="call-button">
+            <i class="fa-solid fa-phone"></i>
         </a>
     </div>
 
@@ -131,44 +132,63 @@
     
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="icon">
-                        <i class="fas fa-truck"></i>
+                    <img src="assets/IMG/shipping sea.jpg" alt="">
+                    <div class="info">
+                        <h3>الشحن البحري</h3>
+                        <p>شحن بحري اقتصادي مع ضمان وصول البضائع بسلام. نقدم حلول شحن بحري متكاملة مع توفير خدمات التخزين والتوزيع. نتعامل مع أكبر الموانئ العالمية.</p>
                     </div>
-                    <h3>الشحن البري</h3>
-                    <p>نقدم خدمات شحن بري سريعة وآمنة داخل وخارج البلاد. نضمن وصول البضائع في الوقت المحدد وبأعلى معايير الجودة. فريقنا المدرب جيدًا يعمل على توفير أفضل الحلول اللوجستية.</p>
-                    <a href="#" class="cta-button button-white">تعرف أكثر</a>
+                    <div class="more">
+                        <a href="#" class="">تعرف أكثر</a>
+                        <i class="fas fa-long-arrow-alt-left"></i>
+                    </div>
                 </div>
+
                 <div class="service-card">
-                    <div class="icon">
-                        <i class="fas fa-plane"></i>
+                    <img src="assets/IMG/Air shipping.jpg" alt="">
+                    <div class="info">
+                        <h3>الشحن الجوي</h3>
+                        <p>شحن جوي سريع وموثوق به لأي مكان في العالم. نضمن وصول البضائع بأمان وسرعة مع تتبع دقيق للشحنات. نتعامل مع أكبر شركات الطيران لتقديم أفضل الخدمات.</p>
                     </div>
-                    <h3>الشحن الجوي</h3>
-                    <p>شحن جوي سريع وموثوق به لأي مكان في العالم. نضمن وصول البضائع بأمان وسرعة مع تتبع دقيق للشحنات. نتعامل مع أكبر شركات الطيران لتقديم أفضل الخدمات.</p>
-                    <a href="#" class="cta-button button-white">تعرف أكثر</a>
+                    <div class="more">
+                        <a href="#" class="">تعرف أكثر</a>
+                        <i class="fas fa-long-arrow-alt-left"></i>
+                    </div>
                 </div>
+
                 <div class="service-card">
-                    <div class="icon">
-                        <i class="fas fa-ship"></i>
+                    <img src="assets/IMG/Land shipping.jpg" alt="">
+                    <div class="info">
+                        <h3>الشحن البري</h3>
+                        <p>نقدم خدمات شحن بري سريعة وآمنة داخل وخارج البلاد. نضمن وصول البضائع في الوقت المحدد وبأعلى معايير الجودة. فريقنا المدرب جيدًا يعمل على توفير أفضل الحلول اللوجستية.</p>
                     </div>
-                    <h3>الشحن البحري</h3>
-                    <p>شحن بحري اقتصادي مع ضمان وصول البضائع بسلام. نقدم حلول شحن بحري متكاملة مع توفير خدمات التخزين والتوزيع. نتعامل مع أكبر الموانئ العالمية.</p>
-                    <a href="#" class="cta-button button-white">تعرف أكثر</a>
+                    <div class="more">
+                        <a href="#" class="">تعرف أكثر</a>
+                        <i class="fas fa-long-arrow-alt-left"></i>
+                    </div>
                 </div>
+                
                 <div class="service-card">
-                    <div class="icon">
-                        <i class="fas fa-file-alt"></i>
+                    <img src="assets/IMG/clearance.jpg" alt="">
+                    <div class="info">
+                        <h3>تخليص جمركي</h3>
+                        <p>خدمات تخليص جمركي سريعة ودقيقة بأسعار تنافسية. نضمن إتمام الإجراءات الجمركية في أسرع وقت ممكن. فريقنا المتخصص يعمل على توفير أفضل الحلول الجمركية.</p>
                     </div>
-                    <h3>تخليص جمركي</h3>
-                    <p>خدمات تخليص جمركي سريعة ودقيقة بأسعار تنافسية. نضمن إتمام الإجراءات الجمركية في أسرع وقت ممكن. فريقنا المتخصص يعمل على توفير أفضل الحلول الجمركية.</p>
-                    <a href="#" class="cta-button button-white">تعرف أكثر</a>
+                    <div class="more">
+                        <a href="#" class="">تعرف أكثر</a>
+                        <i class="fas fa-long-arrow-alt-left"></i>
+                    </div>
                 </div>
+                
                 <div class="service-card">
-                    <div class="icon">
-                        <i class="fas fa-box-open"></i>
+                    <img src="assets/IMG/why-choose-us222.jpg" alt="">
+                    <div class="info">
+                        <h3>التصدير لحساب الغير</h3>
+                        <p>خدمات تصدير متكاملة مع توفير الدعم اللوجستي الكامل. نضمن وصول البضائع إلى وجهتها النهائية بأمان وسرعة. نقدم حلول تصدير مخصصة تناسب احتياجاتك.</p>
                     </div>
-                    <h3>التصدير لحساب الغير</h3>
-                    <p>خدمات تصدير متكاملة مع توفير الدعم اللوجستي الكامل. نضمن وصول البضائع إلى وجهتها النهائية بأمان وسرعة. نقدم حلول تصدير مخصصة تناسب احتياجاتك.</p>
-                    <a href="#" class="cta-button button-white">تعرف أكثر</a>
+                    <div class="more">
+                        <a href="#" class="">تعرف أكثر</a>
+                        <i class="fas fa-long-arrow-alt-left"></i>
+                    </div>
                 </div>
             </div>
         </div>
@@ -236,10 +256,10 @@
                 <p>نحن نفتخر بثقة عملائنا فينا. هنا بعض الآراء الحقيقية من عملائنا الكرام.</p>
             </div>
 
-            <div class="testimonials-grid">
+            <div class="testimonials-grid" class="testimonials">
                 <div class="testimonial-card">
                     <div class="client-info">
-                        <img src="assets/IMG/client1.jpg" alt="Client 1">
+                        <img src="assets/IMG/mark-donald.jpg" alt="Client 1">
                         <div class="info-text">
                             <h3>محمد أحمد</h3>
                             <p class="title">مدير شركة</p>
@@ -260,7 +280,7 @@
 
                 <div class="testimonial-card">
                     <div class="client-info">
-                        <img src="assets/IMG/client1.jpg" alt="Client 1">
+                        <img src="assets/IMG/richard-david.jpg" alt="Client 1">
                         <div class="info-text">
                             <h3>أحمد محمود</h3>
                             <p class="title">رجل أعمال</p>
@@ -281,7 +301,7 @@
 
                 <div class="testimonial-card">
                     <div class="client-info">
-                        <img src="assets/IMG/client1.jpg" alt="Client 1">
+                        <img src="assets/IMG/gloria-mann.jpg" alt="Client 1">
                         <div class="info-text">
                             <h3>سارة خالد</h3>
                             <p class="title">مديرة تسويق</p>
@@ -362,7 +382,7 @@
                 <!-- Blog Item 1 -->
                 <div class="blog-item">
                     <div class="blog-image">
-                        <img src="assets/IMG/blog1.jpg" alt="Blog 1">
+                        <img src="assets/IMG/transport-1200x554-570x370.jpg" alt="Blog 1">
                     </div>
                     <div class="blog-content">
                         <h3 class="blog-title">عنوان المقال الأول</h3>
@@ -377,7 +397,7 @@
                 <!-- Blog Item 2 -->
                 <div class="blog-item">
                     <div class="blog-image">
-                        <img src="assets/IMG/blog2.jpg" alt="Blog 2">
+                        <img src="assets/IMG/warehouse-570x370.jpg" alt="Blog 2">
                     </div>
                     <div class="blog-content">
                         <h3 class="blog-title">عنوان المقال الثاني</h3>

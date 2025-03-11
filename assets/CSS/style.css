@@ -20,7 +20,7 @@ body {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1500px;
     margin: 0 auto;
     padding: 0 20px;
 }
@@ -85,6 +85,7 @@ body {
     max-width: 800px;
     margin: 0 auto;
     line-height: 1.8;
+    text-align: center;
 }
 
 @media (max-width: 768px) {
@@ -273,6 +274,7 @@ header .cta-button:hover {
     text-align: center;
     color: #ffffff;
 }
+
 .banner-image {
     position: absolute;
     width: 100%;
@@ -281,12 +283,27 @@ header .cta-button:hover {
     background-position: center;
     animation: zoomEffect 10s infinite alternate ease-in-out;
 }
+
+.banner-image::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.6),
+        rgba(0, 0, 0, 0.3)
+    );
+}
+
 .banner-content {
     position: relative;
     z-index: 2;
     width: 100%;
     padding: 30px 20px;
-    backdrop-filter: blur(3px);
+    backdrop-filter: blur(1px);
     border-radius: 12px;
     animation: fadeIn 3s ease-in-out;
 }
@@ -328,15 +345,6 @@ header .cta-button:hover {
     padding: 10px 30px;
     font-size: 17px;
     font-weight: 700;
-}
-
-.banner-content .cta-button.secondary {
-    background-color: transparent;
-    border: 1px solid #ffffff;
-}
-
-.banner-content .cta-button.secondary:hover {
-    background-color: rgba(255, 255, 255, 0.1);
 }
 
 @media (max-width: 768px) {
@@ -397,6 +405,9 @@ header .cta-button:hover {
 
 /* start Button Up  */
 .buttonUp {
+    background-color: #fff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    width: 40px;
     position: fixed;
     z-index: 99;
     bottom: 40px;
@@ -430,26 +441,38 @@ header .cta-button:hover {
   /* end Button Up  */
   
   /* start whatsapp button  */
-.whatsapp{
+.contact-buttons{
     display: none;
 }
-.whatsapp-button {
+.whatsapp-button, 
+.call-button{
     position: fixed;
     text-decoration: none;
     z-index: 99;
-    bottom: 52px;
-    right: 32px;
-    background-color: #25d366;
-    color: #ffff;
     padding: 9px;
     border-radius: 26%;
-    font-size: 36px;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.2);
 }
-.whatsapp-button:hover {
+.call-button{
+    bottom: 130px;
+    right: 32px;
+    background-color: #fff;
+    color: #25d366;
+    font-size: 30px;
+}
+.whatsapp-button {
+    bottom: 52px;
+    right: 32px;
+    background-color: #25d366;
+    color: #ffff;
+    font-size: 36px;
+}
+.whatsapp-button:hover,
+.call-button:hover {
     transform: scale(1.1);
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
@@ -457,12 +480,20 @@ header .cta-button:hover {
     .whatsapp-button {
         font-size: 30px;
     }
+    .call-button{
+        font-size: 28px;
+    }
 }
 @media(max-width: 768px){
     .whatsapp-button {
-        font-size: 25px;
-        right: 8px;
-        bottom: 36px;
+        font-size: 29px;
+        right: 17px;
+        bottom: 47px;
+    }
+    .call-button{
+        font-size: 24px;
+        right: 17px;
+        bottom: 114px;
     }
 }
 /* end whatsapp button */
@@ -484,7 +515,8 @@ header .cta-button:hover {
 .stats {
     display: flex;
     justify-content: center;
-    gap: 30px;
+    flex-wrap: wrap;
+    gap: 40px;
     margin-bottom: 60px;
 }
 
@@ -496,8 +528,8 @@ header .cta-button:hover {
 
 .circle {
     position: relative;
-    width: 150px;
-    height: 150px;
+    width: 170px;
+    height: 170px;
     background-color: #ffffff;
     border-radius: 50%;
     display: flex;
@@ -515,14 +547,14 @@ header .cta-button:hover {
 
 .circle i {
     position: absolute;
-    top: 17px;
+    top: 12px;
     font-size: 30px;
     color: var(--third-color);
 }
 
 .circle h3 {
     position: absolute;
-    top: 47px;
+    top: 52px;
     font-size: 28px;
     font-weight: 600;
     color: #111;
@@ -530,7 +562,7 @@ header .cta-button:hover {
 
 .circle p {
     position: absolute;
-    top: 93px;
+    top: 100px;
     font-size: 14px;
     color: #555555;
 }
@@ -558,8 +590,8 @@ header .cta-button:hover {
     }
 
     .circle {
-        width: 140px;
-        height: 140px;
+        width: 150px;
+        height: 150px;
     }
 
     .circle i {
@@ -568,10 +600,12 @@ header .cta-button:hover {
 
     .circle h3 {
         font-size: 24px;
+        top: 45px;
     }
-
+    
     .circle p {
         font-size: 12px;
+        top: 91px;
     }
 
     .about-section .cta-button {
@@ -599,22 +633,23 @@ header .cta-button:hover {
     }
 
     .circle {
-        width: 120px;
-        height: 120px;
+        width: 140px;
+        height: 140px;
     }
 
     .circle i {
-        font-size: 20px;
+        font-size: 25px;
     }
 
     .circle h3 {
         font-size: 20px;
-        top: 43px;
+        top: 46px;
     }
 
     .circle p {
-        font-size: 10px;
-        top: 79px;
+        font-size: 11px;
+        top: 85px;
+        max-width: 75px;
     }
 
     .about-section .cta-button {
@@ -628,28 +663,37 @@ header .cta-button:hover {
 .services-section {
     background-color: var(--background-section);
     padding: var(--padding-section);
-    text-align: center;
 }
 
 .services-section .content {
     margin-bottom: 80px;
 }
 
+.services-section .content h2{
+    display: block;
+    text-align: center;
+}
+
 .services-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 3 Cards في سطر واحد في الشاشات الكبيرة */
     gap: 30px;
-    justify-content: center; /* علشان الكروت تبقى في المنتصف */
+    justify-content: center;
+    align-items: stretch;
 }
 
 .service-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* لجعل المحتوى موزعًا بالتساوي داخل البطاقة */
     background-color: #ffffff;
-    padding: 40px 20px;
-    border-radius: 10px;
+    /* padding: 40px 20px; */
+    border-radius: 6px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
     transition: transform var(--main-transition), box-shadow var(--main-transition);
     position: relative;
     overflow: hidden;
+    height: 100%;
 }
 
 .service-card:hover {
@@ -657,28 +701,56 @@ header .cta-button:hover {
     box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
 }
 
-.service-card .icon {
-    font-size: 60px;
-    color: var(--third-color);
-    margin-bottom: 20px;
-    transition: transform var(--main-transition);
+.service-card img{
+    flex-grow: 1;
+    width: 100%;
+    max-width: 100%;
 }
 
-.service-card:hover .icon {
-    transform: scale(1.1);
+.service-card .info{
+    padding: 0 20px 20px;
 }
 
 .service-card h3 {
     font-size: 24px;
     font-weight: 600;
     color: #222;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .service-card p {
     font-size: 16px;
     color: #555555;
-    margin-bottom: 20px;
+    /* margin-bottom: 20px; */
+}
+
+.service-card .more {
+    padding: 20px;
+    border-top: 1px solid #e6e6e7;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.service-card .more a{
+    color: var(--third-color);
+    font-weight: bold;
+    text-decoration: none;
+}
+.service-card .more i{
+    color: var(--third-color);
+}
+
+.service-card:hover .more i {
+    animation: moving-arrow 0.6s linear infinite alternate;
+}
+
+@keyframes moving-arrow {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(15px);
+    }
 }
 
 @media (max-width: 768px) {
@@ -694,19 +766,14 @@ header .cta-button:hover {
         grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); 
     }
 
-    .service-card {
-        padding: 30px 15px;
-    }
-
-    .service-card .icon {
-        font-size: 50px;
-    }
-
     .service-card h3 {
         font-size: 20px;
     }
 
-    .service-card p {
+    .service-card p{
+        font-size: 14px;
+    }
+    .more {
         font-size: 14px;
     }
 
@@ -729,20 +796,15 @@ header .cta-button:hover {
         grid-template-columns: 1fr; 
     }
 
-    .service-card {
-        padding: 20px 10px;
-    }
-
-    .service-card .icon {
-        font-size: 40px;
-    }
-
     .service-card h3 {
         font-size: 18px;
     }
 
-    .service-card p {
+    .service-card p{
         font-size: 12px;
+    }
+    .more {
+        font-size: 14px;
     }
 
     .service-card .cta-button {
@@ -1310,11 +1372,6 @@ header .cta-button:hover {
         grid-template-columns: 1fr;
     }
 
-    .blog-item {
-        flex-direction: column;
-        text-align: center;
-    }
-
     .blog-image {
         max-width: 100%;
     }
@@ -1337,6 +1394,11 @@ header .cta-button:hover {
 @media (max-width: 480px) {
     .blog-title {
         font-size: 18px;
+    }
+
+    .blog-item {
+        flex-direction: column;
+        text-align: center;
     }
 
     .blog-excerpt {

@@ -123,7 +123,7 @@ $(document).ready(function () {
     var sc = $(window).scrollTop();
     // console.log(sc);
     var buttonUp = $(".buttonUp");
-    var whatsappButton = $(".whatsapp");
+    var whatsappButton = $(".contact-buttons");
     if (sc >= 634) {
       buttonUp.fadeIn();
     } else {
