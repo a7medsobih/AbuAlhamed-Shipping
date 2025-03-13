@@ -1,0 +1,138 @@
+/* start header */
+.main-banner {
+    height: 70vh;
+}
+
+.banner-image::before {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0));
+}
+
+.title{
+    background-color: var(--background-section);
+    padding: 50px 0 0;
+}
+
+.title h1 {
+    font-size: 48px;
+    font-weight: 400;
+    margin-bottom: 20px;
+    text-align: center;
+    display: block;
+    position: relative;
+    animation: fadeIn 3s ease-in-out;
+}
+
+.title h1:after{
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    width: 60px;
+    height: 4px;
+    background-color: var(--main-color);
+    transform: translateX(-50%);
+}
+.title .content{
+    margin: 0;
+}
+
+.title .content p{
+    margin: 25px auto 0;
+    animation: fadeIn 3s ease-in-out;
+}
+
+@media (max-width: 768px) {
+    .title h1 {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .title h1 {
+        font-size: 28px;
+    }
+    .main-banner p {
+        font-size: 16px;
+    } 
+}
+/* end header */
+
+/* start why-choose-us  */
+.why-choose {
+    background-color: var(--background-section);
+    padding: 50px 0 100px;
+    text-align: center;
+}
+
+.why-choose .trust-factors {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.why-choose .factor {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    width: calc(33.333% - 30px);
+    text-align: center;
+    transition: transform var(--main-transition);
+}
+
+.why-choose .factor:hover {
+    transform: translateY(-10px);
+}
+
+.why-choose .factor i {
+    font-size: 40px;
+    color: var(--sec-color);
+    margin-bottom: 15px;
+}
+
+.why-choose .factor h3 {
+    font-size: 22px;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.why-choose .factor p {
+    font-size: 16px;
+    color: #555;
+}
+
+.why-choose .cta {
+    margin-top: 85px;
+}
+
+.why-choose .cta-button {
+    font-size: 18px;
+}
+
+.why-choose .cta-button:hover {
+    background-color: var(--sec-color);
+}
+
+@media (max-width: 1024px) {
+    .why-choose .factor {
+        width: calc(50% - 30px);
+    }
+    .why-choose .cta-button {
+        font-size: 15px;
+        font-weight: 700;
+    }
+}
+
+@media (max-width: 600px) {
+    .why-choose .factor {
+        width: 100%;
+    }
+    .why-choose .content h2 {
+        font-size: 32px;
+    }
+    .why-choose .cta-button {
+        font-size: 13px;
+    }
+}
+/* end why-choose-us */

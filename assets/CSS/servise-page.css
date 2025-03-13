@@ -1,0 +1,47 @@
+.shipping-page {
+    text-align: center;
+    background-color: #f8f9fa;
+    padding-bottom: 100px;
+}
+
+.shipping-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 90px;
+}
+
+.image-container {
+    flex: 1;
+    max-width: 500px;
+}
+
+.image-container img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.text-container {
+    flex: 1;
+    max-width: fit-content;
+    text-align: right;
+}
+
+.text-container p {
+    font-size: 18px;
+    color: #444;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 768px) {
+    .shipping-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .text-container {
+        text-align: center;
+    }
+}

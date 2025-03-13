@@ -25,6 +25,10 @@ body {
     padding: 0 20px;
 }
 
+.active{   
+    color: var(--main-color);
+}
+
 .cta-button {
     background-color: var(--main-color); 
     color: #ffffff; 
@@ -320,7 +324,7 @@ header .cta-button:hover {
 
 .banner-content h1 {
     font-size: 40px;
-    font-weight: 500;
+    font-weight: 600;
     margin-bottom: 20px;
 }
 .banner-content h2 {
@@ -333,12 +337,6 @@ header .cta-button:hover {
     font-size: 20px;
     font-weight: 400;
     margin-bottom: 40px;
-}
-
-.banner-content .cta-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
 }
 
 .banner-content .cta-button {
@@ -360,15 +358,10 @@ header .cta-button:hover {
         font-size: 16px;
     }
 
-    .banner-content .cta-buttons {
-        flex-direction: column;
-        gap: 10px;
-        align-items: center;
-    }
-
     .banner-content .cta-button {
-        width: 40%;
-        padding: 10px 20px;
+        /* width: 40%;
+        padding: 10px 20px; */
+        font-size: 14px;
     }
 }
 @media (max-width: 480px) {
@@ -391,14 +384,10 @@ header .cta-button:hover {
         margin-bottom: 25px;
     }
 
-    .banner-content .cta-buttons {
-        gap: 5px;
-    }
-
     .banner-content .cta-button {
         font-size: 13px;
         font-weight: 500;
-        padding: 5px 8px;
+        padding: 5px 10px;
     }
 }
 /* End Banner */
@@ -406,7 +395,7 @@ header .cta-button:hover {
 /* start Button Up  */
 .buttonUp {
     background-color: #fff;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.4);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     width: 50px;
     height: 50px;
     position: fixed;
@@ -417,10 +406,6 @@ header .cta-button:hover {
     border-radius: 50%; 
     cursor: pointer;
     display: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
 }
 
 .buttonUp:hover {
@@ -429,6 +414,9 @@ header .cta-button:hover {
 
 .buttonUp i {
     font-size: 30px;
+    position: absolute;
+    top: 8.5px;
+    left: 14px;
 }
 
 @keyframes bounce {
@@ -436,7 +424,7 @@ header .cta-button:hover {
     50% { transform: translateY(-10px); }
     100% { transform: translateY(0); }
 }
-@media (max-width: 768px) {
+@media (max-width: 480px) {
     .buttonUp{
         display: none !important;
     }
@@ -457,7 +445,7 @@ header .cta-button:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    transition: transform var(--main-transition) ease-in-out, box-shadow 0.3s ease-in-out;
     box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.2);
 }
 .call-button{
@@ -698,7 +686,6 @@ header .cta-button:hover {
     height: fit-content;
 }
 
-
 .service-card:hover {
     transform: translateY(-10px);
     box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
@@ -737,6 +724,11 @@ header .cta-button:hover {
     color: var(--third-color);
     font-weight: bold;
     text-decoration: none;
+    transition: var(--main-transition);
+}
+
+.service-card .more a:hover {
+    transform: scale(1.1);
 }
 
 .service-card .more i {
@@ -898,153 +890,6 @@ header .cta-button:hover {
     } 
 }
 /* End Slider */
-
-/* .why-choose-us {
-    background-color: #f5f5f5;
-    padding: var(--padding-section);
-    text-align: center;
-}
-
-.why-choose-us .content {
-    margin-bottom: 80px;
-}
-
-.why-choose-us h2 {
-    font-size: 48px;
-    font-weight: 800;
-    color: #000000;
-    margin-bottom: 20px;
-    position: relative;
-    display: inline-block;
-}
-
-.why-choose-us h2::after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    bottom: -10px;
-    width: 60px;
-    height: 4px;
-    background-color: var(--main-color);
-    transform: translateX(-50%);
-}
-
-.why-choose-us p {
-    font-size: 18px;
-    color: #555555;
-    max-width: 800px;
-    margin: 0 auto;
-    line-height: 1.8;
-}
-
-.features-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 40px;
-    padding: 0 20px;
-}
-
-.feature-card {
-    background-color: #ffffff;
-    padding: 40px 20px;
-    border-radius: 10px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
-    transition: transform var(--main-transition), box-shadow var(--main-transition);
-    position: relative;
-    overflow: hidden;
-}
-
-.feature-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
-}
-
-.feature-card .icon {
-    font-size: 60px;
-    color: var(--main-color);
-    margin-bottom: 20px;
-    transition: transform var(--main-transition);
-}
-
-.feature-card:hover .icon {
-    transform: scale(1.1);
-}
-
-.feature-card h3 {
-    font-size: 24px;
-    font-weight: 700;
-    color: #000000;
-    margin-bottom: 15px;
-}
-
-.feature-card p {
-    font-size: 16px;
-    color: #555555;
-    margin-bottom: 20px;
-}
-
-@media (max-width: 768px) {
-    .why-choose-us h2 {
-        font-size: 36px;
-    }
-
-    .why-choose-us p {
-        font-size: 16px;
-    }
-
-    .features-grid {
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-        gap: 30px;
-    }
-
-    .feature-card {
-        padding: 30px 15px;
-    }
-
-    .feature-card .icon {
-        font-size: 50px;
-    }
-
-    .feature-card h3 {
-        font-size: 20px;
-    }
-
-    .feature-card p {
-        font-size: 14px;
-    }
-}
-
-@media (max-width: 480px) {
-    .why-choose-us h2 {
-        font-size: 28px;
-    }
-
-    .why-choose-us p {
-        font-size: 14px;
-    }
-
-    .features-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .feature-card {
-        padding: 20px 10px;
-    }
-
-    .feature-card .icon {
-        font-size: 40px;
-    }
-
-    .feature-card h3 {
-        font-size: 18px;
-    }
-
-    .feature-card p {
-        font-size: 12px;
-    }
-} */
-/* /////////////// */
 
 /* Start Testimonials Section */
 .testimonials-section {
@@ -1424,7 +1269,7 @@ header .cta-button:hover {
 /* Start Footer */
 footer {
     background-color: #191919;
-    padding: 100px 0 0;
+    padding: 70px 0 0;
     color: #fff;
     text-align: right;
 }
@@ -1444,6 +1289,7 @@ footer .container {
 footer .box {
     flex: 1;
     min-width: 250px;
+    margin: auto 0;
 }
 
 footer .box h3 {

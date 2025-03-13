@@ -25,6 +25,24 @@ document.addEventListener("click", function (event) {
 });
 
 $(document).ready(function () {
+
+  $(window).on("scroll", function () {
+    var sc = $(window).scrollTop();
+    // console.log(sc);
+    var buttonUp = $(".buttonUp");
+    var whatsappButton = $(".contact-buttons");
+    if (sc >= 634) {
+      buttonUp.fadeIn();
+    } else {
+      buttonUp.fadeOut();
+    }
+    if (sc >= 250) {
+      whatsappButton.fadeIn();
+    } else {
+      whatsappButton.fadeOut();
+    }
+  });
+
   // Start about Section
   const observer = new IntersectionObserver(
     (entries) => {
@@ -119,22 +137,7 @@ $(document).ready(function () {
     );
   });
 
-  $(window).on("scroll", function () {
-    var sc = $(window).scrollTop();
-    // console.log(sc);
-    var buttonUp = $(".buttonUp");
-    var whatsappButton = $(".contact-buttons");
-    if (sc >= 634) {
-      buttonUp.fadeIn();
-    } else {
-      buttonUp.fadeOut();
-    }
-    if (sc >= 250) {
-      whatsappButton.fadeIn();
-    } else {
-      whatsappButton.fadeOut();
-    }
-  });
+
 
   // scroll to top
   $(".buttonUp").click(function () {
