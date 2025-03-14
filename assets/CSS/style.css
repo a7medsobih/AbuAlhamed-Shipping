@@ -307,7 +307,7 @@ header .cta-button:hover {
     z-index: 2;
     width: 100%;
     padding: 30px 20px;
-    backdrop-filter: blur(1px);
+    backdrop-filter: blur(3px);
     border-radius: 12px;
     animation: fadeIn 3s ease-in-out;
 }
@@ -415,14 +415,24 @@ header .cta-button:hover {
 .buttonUp i {
     font-size: 30px;
     position: absolute;
-    top: 8.5px;
-    left: 14px;
+    top: 50%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 @keyframes bounce {
     0% { transform: translateY(0); }
     50% { transform: translateY(-10px); }
     100% { transform: translateY(0); }
+}
+@media (max-width: 768px) {
+    .buttonUp{
+        width: 40px;
+        height: 40px;
+    }
+    .buttonUp i {
+        font-size: 25px;
+    }
 }
 @media (max-width: 480px) {
     .buttonUp{
@@ -449,7 +459,7 @@ header .cta-button:hover {
     box-shadow: 0px 2px 7px rgba(0, 0, 0, 0.2);
 }
 .call-button{
-    bottom: 130px;
+    bottom: 125px;
     right: 32px;
     background-color: #fff;
     color: #25d366;
@@ -472,7 +482,7 @@ header .cta-button:hover {
         font-size: 30px;
     }
     .call-button{
-        font-size: 28px;
+        font-size: 26px;
     }
 }
 @media(max-width: 768px){
@@ -935,8 +945,8 @@ header .cta-button:hover {
 
 .client-info .info-text {
     display: flex;
-    flex-direction: column; /* لجعل الاسم والـ title في عمود واحد */
-    align-items: flex-start; /* محاذاة النص إلى اليمين */
+    flex-direction: column; 
+    align-items: flex-start; 
 }
 
 .client-info h3 {
@@ -1157,9 +1167,8 @@ header .cta-button:hover {
 /* Blog Grid */
 .blog-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* مقالتين جنب بعض */
+    grid-template-columns: repeat(2, 1fr);
     gap: 30px;
-    padding: 0 20px;
 }
 
 /* Blog Item */
@@ -1247,6 +1256,10 @@ header .cta-button:hover {
 }
 
 @media (max-width: 480px) {
+    .blog-content{
+        padding: 0 20px ;
+    }
+
     .blog-title {
         font-size: 18px;
     }

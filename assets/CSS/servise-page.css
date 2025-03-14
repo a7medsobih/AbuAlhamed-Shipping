@@ -36,12 +36,23 @@
     margin-bottom: 15px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1024px) {
+    .shipping-content {
+        margin-top: 60px;
+    }
     .shipping-content {
         flex-direction: column;
         text-align: center;
     }
     .text-container {
         text-align: center;
+    }
+    .image-container{
+        max-width: 90%;
+    }
+}
+@media (max-width: 768px) {
+    .text-container p{
+        font-size: 14px;
     }
 }

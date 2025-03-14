@@ -43,6 +43,16 @@ $(document).ready(function () {
     }
   });
 
+  // scroll to top
+  $(".buttonUp").click(function () {
+    $("html, body").animate(
+      {
+        scrollTop: 0,
+      },
+      1000
+    );
+  });
+
   // Start about Section
   const observer = new IntersectionObserver(
     (entries) => {
@@ -124,7 +134,7 @@ $(document).ready(function () {
   setInterval(moveToNextSlide, 5000); // تغيير الصورة كل 5 ثواني
   // End slider
 
-  $("ul li a, .goToQuote").click(function (e) {
+  $(".goToQuote").click(function (e) {
     e.preventDefault(); 
     // console.log('.' + $(this).data('scroll'));
 
@@ -137,16 +147,5 @@ $(document).ready(function () {
     );
   });
 
-
-
-  // scroll to top
-  $(".buttonUp").click(function () {
-    $("html, body").animate(
-      {
-        scrollTop: 0,
-      },
-      1000
-    );
-  });
 });
 AOS.init();
