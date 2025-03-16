@@ -51,6 +51,7 @@ body {
     border-radius: 30px;
     font-weight: 700;
     display: inline-block;
+    padding: 5px 15px;
 }
 
 .button-white:hover {
@@ -1257,7 +1258,7 @@ header .cta-button:hover {
 
 @media (max-width: 480px) {
     .blog-content{
-        padding: 0 20px ;
+        padding: 0 20px 20px;
     }
 
     .blog-title {
@@ -1472,13 +1473,16 @@ footer .copyright a:hover {
         font-size: 22px;
         text-align: center;
     }
+    
+    footer .box .text{
+        text-align: center;
+    }
 
     footer .box .social li a {
         font-size: 18px;
         width: 40px;
         height: 40px;
     }
-
 
     footer .box .line i {
         font-size: 18px;
