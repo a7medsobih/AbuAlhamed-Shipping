@@ -12,45 +12,52 @@
     <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/bootstrap-5.3.2-dist/css/bootstrap.min.css">
 </head>
 <body>
     <header>
-        <div class="container">
-            <div class="box">
-                <a class="cta-button button-white goToQuote" href="#" data-scroll="quote">اطلب عرض سعر</a>
-            </div>
+        <nav class="navbar navbar-expand-md p-0">
+            <div class="container d-flex justify-content-between align-items-center">
+                
+                <a class="navbar-brand logo" href="index.html">
+                    <img  src="assets/IMG/logo.jpg" alt="logo">
+                </a>
 
-            <!-- أيقونة الـ Hamburger Menu -->
-            <div class="menu-icon" id="menuIcon">
-                <i class="fas fa-bars"></i>
-                <nav class="drop-menu" id="navMenu" data-aos="fade-down">
-                    <ul>
-                        <li><a href="index.html">الرئيسية</a></li>
-                        <li><a href="about.html">من نحن</a></li>
-                        <li><a href="services.html">خدماتنا</a></li>
-                        <li><a href="articles.html">المقالات</a></li>
-                        <li><a href="support.html">اتصل بنا</a></li>
-                        <li><a class="quote1" href="#">اطلب عرض سعر</a> </li>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                    <span class="fas fa-bars"></span>
+                </button>
+    
+                <div class="collapse navbar-collapse justify-content-md-center" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">الرئيسية</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">من نحن</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="services.html">خدماتنا</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="articles.html">المقالات</a>
+                        </li>    
+                        <li class="nav-item">
+                            <a class="nav-link" href="support.html">اتصل بنا</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link quote" href="get-aquote.html">اطلب عرض سعر</a>
+                        </li>
                     </ul>
-                </nav>
+                </div>
+    
+                <div class="box">
+                    <a class="cta-button button-white goToQuote" href="get-aquote.html">اطلب عرض سعر</a>
+                </div>
             </div>
-
-            <nav>
-                <ul>
-                    <li><a href="index.html">الرئيسية</a></li>
-                    <li><a href="about.html">من نحن</a></li>
-                    <li><a href="services.html" class="active">خدماتنا</a></li>
-                    <li><a href="articles.html">المقالات</a></li>
-                    <li><a href="support.html">اتصل بنا</a></li>
-                </ul>
-            </nav>
-
-            <div class="logo" data-aos="fade-down">
-                <img src="assets/IMG/logo.jpg" alt="شركة أبوالحمد للشحن">
-            </div>
-            
-        </div>
+        </nav>
     </header>
+    <!-- end header -->
 
     <div class="buttonUp">
         <i class="fa-solid fa-angles-up"></i>
@@ -67,22 +74,42 @@
         </a>
     </div>
 
-    <section class="main-banner">
-        <div class="banner-image" style="background-image: url('assets/IMG/4581.jpg');"></div>
-    </section>
+    <div class="heros" style="background-image: url('assets/IMG/458122.jpg'); "></div>
     
     <section class="shipping-page">
         <div class="container">
             <div class="title">
                 <h1>الشحن البحري</h1>
             </div>
-            <div class="shipping-content">
-                <div class="text-container">
+            <div class="shipping-content row  px-3">
+                <div class="text-container col-lg">
                     <p>تمتلك الشركة طاقم كبير متخصص في تقديم خدمات الشحن البحري بكفاءة عالية وتقديم أفضل خدمة للعميل وكذلك لقطاع الحكومة والشركات والمؤسسات من والى مصر وكافة انحاء العالم.</p>
                     <p>تقوم الشركة بخدمات التأمين على الشحنات وتأمين وسائل التخزين، وتوفير السفن الملائمة لحجم الشحنات بإختلاف أحجامها وكمياتها، وتقدم الشركة أفضل خدماتها في مجال الشحن البحري من خلال شركائها في مختلف أنحاء العالم، وبما لديها من وكلاء وخبراء في التعامل مع الشحنات في الميناء مما يضمن للعميل السرعة في الأداء ووصول الشحنات الى مكانها آمنه، وتوفر الشركة خدمة النقل للشحنات من الباب للباب بأسعار تنافسية.</p>
                 </div>
-                <div class="image-container">
-                    <img src="assets/IMG/719.jpg" alt="الشحن البحري">
+                <div id="serviceCarousel" class="carousel slide col-lg p-0" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <!-- Slide 1 -->
+                        <div class="carousel-item active">
+                            <img src="assets/IMG/image1.jpg" class="d-block w-100 h-75" alt="الشحن البحري 1">
+                        </div>
+                        <!-- Slide 2 -->
+                        <div class="carousel-item">
+                            <img src="assets/IMG/image2.jpg" class="d-block w-100 h-75" alt="الشحن البحري 2">
+                        </div>
+                        <!-- Slide 3 -->
+                        <div class="carousel-item">
+                            <img src="assets/IMG/image3.jpg" class="d-block w-100 h-75" alt="الشحن البحري 3">
+                        </div>
+                    </div>
+                    <!-- Carousel Controls -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#serviceCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#serviceCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
                 </div>
             </div>
         </div>
@@ -129,7 +156,7 @@
                     <li><a href="services.html">خدماتنا</a></li>
                     <li><a href="articles.html">المقالات</a></li>
                     <li><a href="support.html">اتصل بنا</a></li>
-                    <li><a href="#" data-scroll="quote">اطلب عرض سعر</a></li>
+                    <li><a href="get-aquote.html">اطلب عرض سعر</a></li>
                 </ul>
             </div>
 
@@ -162,9 +189,11 @@
     </footer>
     <!-- End Footer -->
 
+    <script src="assets/JS/jquery-3.7.1.min (1).js"></script>
+    <!-- Bootstrap JS -->
+    <script src="assets/bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- jQuery -->
-    <script src="assets/JS/jquery-3.7.1.min (1).js"></script>
     <script src="assets/JS/main.js"></script>
 </body>
 </html>

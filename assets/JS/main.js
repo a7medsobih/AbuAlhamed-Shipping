@@ -1,46 +1,38 @@
-document.getElementById("menuIcon").addEventListener("click", function (event) {
-  event.stopPropagation();
-
-  var navMenu = document.getElementById("navMenu");
-  var menuIcon = document.getElementById("menuIcon");
-
-  navMenu.classList.toggle("active");
-
-  if (navMenu.classList.contains("active")) {
-    menuIcon.style.color = "#e60000";
-  } else {
-    menuIcon.style.color = "#000000";
-  }
-});
-
-// علشان نختفي الـ Drop Menu لما نضغط في أي حتة في الصفحة
-document.addEventListener("click", function (event) {
-  var navMenu = document.getElementById("navMenu");
-  var menuIcon = document.getElementById("menuIcon");
-
-  if (navMenu.classList.contains("active")) {
-    navMenu.classList.remove("active");
-    menuIcon.style.color = "#000000";
-  }
-});
-
 $(document).ready(function () {
+  $(".navbar-toggler").click(function (event) {
+    event.stopPropagation();
 
-  $(window).on("scroll", function () {
-    var sc = $(window).scrollTop();
-    // console.log(sc);
-    var buttonUp = $(".buttonUp");
-    var whatsappButton = $(".contact-buttons");
-    if (sc >= 634) {
-      buttonUp.fadeIn();
+    var navMenu = $("#collapsibleNavbar");
+    var menuIcon = $(this).find(".fa-bars");
+
+    // التأكد من الحالة باستخدام aria-expanded
+    if ($(this).attr("aria-expanded") === "true") {
+      menuIcon.css("color", "#e60000");
     } else {
-      buttonUp.fadeOut();
+      menuIcon.css("color", "#000000");
     }
-    if (sc >= 250) {
-      whatsappButton.fadeIn();
-    } else {
-      whatsappButton.fadeOut();
+  });
+
+  // إغلاق القائمة عند الضغط على أيقونة القائمة نفسها
+  $(".navbar-toggler .fa-bars").click(function (event) {
+    event.stopPropagation();
+    $(".navbar-toggler").trigger("click");
+  });
+
+  // إغلاق القائمة عند الضغط خارجها
+  $(document).click(function () {
+    var navMenu = $("#collapsibleNavbar");
+    var menuIcon = $(".navbar-toggler .fa-bars");
+
+    if (navMenu.hasClass("show")) {
+      $(".navbar-toggler").trigger("click");
+      menuIcon.css("color", "#000000");
     }
+  });
+
+  // منع إغلاق القائمة عند الضغط داخلها
+  $("#collapsibleNavbar").click(function (event) {
+    event.stopPropagation();
   });
 
   // scroll to top
@@ -53,43 +45,45 @@ $(document).ready(function () {
     );
   });
 
-  // Start about Section
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          startCounters();
-          observer.unobserve(entry.target); // نوقف المتابعة بعد ما نبدأ العد
-        }
+  // start about Section
+  if ($(".about-section").length > 0) {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            startCounters();
+            observer.unobserve(entry.target); // نوقف المتابعة بعد ما نبدأ العد
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    // نحدد السيكشن اللي هنشوفه
+    const aboutSection = $(".about-section")[0];
+    observer.observe(aboutSection);
+
+    function startCounters() {
+      $(".circle h3").each(function () {
+        const $this = $(this);
+        const target = +$this.attr("data-target");
+        const suffix = $this.attr("data-suffix") || ""; // + || %
+        const speed = 100; // السرعه (كلما قل الرقم كلما زادت السرعه)
+
+        const updateCount = () => {
+          const currentCount = +$this.text().replace(suffix, ""); // نمسح اللاحقة علشان ناخد الرقم فقط
+
+          if (currentCount < target) {
+            $this.text(Math.ceil(currentCount + target / speed) + suffix);
+            setTimeout(updateCount, 30);
+          } else {
+            $this.text(target + suffix); // added + || %
+          }
+        };
+
+        updateCount();
       });
-    },
-    { threshold: 0.5 }
-  );
-
-  // نحدد السيكشن اللي هنشوفه
-  const aboutSection = $(".about-section")[0];
-  observer.observe(aboutSection);
-
-  function startCounters() {
-    $(".circle h3").each(function () {
-      const $this = $(this);
-      const target = +$this.attr("data-target");
-      const suffix = $this.attr("data-suffix") || ""; // + || %
-      const speed = 100; // السرعه (كلما قل الرقم كلما زادت السرعه)
-
-      const updateCount = () => {
-        const currentCount = +$this.text().replace(suffix, ""); // نمسح اللاحقة علشان ناخد الرقم فقط
-
-        if (currentCount < target) {
-          $this.text(Math.ceil(currentCount + target / speed) + suffix);
-          setTimeout(updateCount, 30);
-        } else {
-          $this.text(target + suffix); // added + || %
-        }
-      };
-
-      updateCount();
-    });
+    }
   }
   // End about Section
 
@@ -115,7 +109,7 @@ $(document).ready(function () {
   let currentIndex = 0;
 
   function changeBackground() {
-    $(".community-slider").css({
+    $(".slider").css({
       "background-image": "url(" + images[currentIndex] + ")",
       transition: "background-image 0.5s ease-in-out",
     });
@@ -135,7 +129,7 @@ $(document).ready(function () {
   // End slider
 
   $(".goToQuote").click(function (e) {
-    e.preventDefault(); 
+    e.preventDefault();
     // console.log('.' + $(this).data('scroll'));
 
     // scrolling navbar
@@ -145,6 +139,48 @@ $(document).ready(function () {
       },
       1000
     );
+  });
+
+  //////////////////////////////////:)
+  function equalizeInfoHeight() {
+    var maxHeight = 0;
+    $(".service-card .info").css("height", "auto"); // Reset height
+
+    $(".service-card .info").each(function () {
+      var thisHeight = $(this).outerHeight();
+      if (thisHeight > maxHeight) {
+        maxHeight = thisHeight;
+      }
+    });
+
+    $(".service-card .info").css("height", maxHeight + "px");
+  }
+
+  equalizeInfoHeight(); // Call on page load
+
+  $(window).resize(function () {
+    equalizeInfoHeight(); // Call on window resize
+  });
+
+  //////////////////////////////////:)
+  function equalizeBlogContentHeight() {
+    var maxHeight = 0;
+    $(".blog-item .blog-content").css("height", "auto"); // إعادة تعيين الارتفاع
+
+    $(".blog-item .blog-content").each(function () {
+      var thisHeight = $(this).outerHeight();
+      if (thisHeight > maxHeight) {
+        maxHeight = thisHeight;
+      }
+    });
+
+    $(".blog-item .blog-content").css("height", maxHeight + "px");
+  }
+
+  equalizeBlogContentHeight(); // استدعاء الدالة عند تحميل الصفحة
+
+  $(window).resize(function () {
+    equalizeBlogContentHeight(); // استدعاء الدالة عند تغيير حجم النافذة
   });
 
 });

@@ -2,14 +2,8 @@
     padding: 80px 0;
 }
 
-.blog-views {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-size: 14px;
-    color: #888;
-    margin-bottom: 20px;
-    float: right;
+.blog-title {
+    margin-bottom: 25px;
 }
 
 .read-more{
@@ -17,17 +11,6 @@
     margin: 0;
     position: relative;
     top: -5px;
-}
-
-.blog-views i {
-    color: var(--third-color);
-    font-size: 16px;
-}
-
-.blog-meta {
-    font-size: 14px;
-    color: #888;
-    margin-bottom: 12px;
 }
 
 .load-more {
@@ -57,10 +40,5 @@
 
     .blog-excerpt {
         font-size: 14px;
-    }
-
-    .blog-views,
-    .blog-meta{
-        font-size: 12px;
     }
 }

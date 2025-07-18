@@ -12,45 +12,52 @@
     <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/bootstrap-5.3.2-dist/css/bootstrap.min.css">
 </head>
 <body>
     <header>
-        <div class="container">
-            <div class="box">
-                <a class="cta-button button-white goToQuote" href="#" data-scroll="quote">اطلب عرض سعر</a>
-            </div>
+        <nav class="navbar navbar-expand-md p-0">
+            <div class="container d-flex justify-content-between align-items-center">
+                
+                <a class="navbar-brand logo" href="index.html">
+                    <img  src="assets/IMG/logo.jpg" alt="logo">
+                </a>
 
-            <!-- أيقونة الـ Hamburger Menu -->
-            <div class="menu-icon" id="menuIcon">
-                <i class="fas fa-bars"></i>
-                <nav class="drop-menu" id="navMenu" data-aos="fade-down">
-                    <ul>
-                        <li><a href="index.html">الرئيسية</a></li>
-                        <li><a href="about.html">من نحن</a></li>
-                        <li><a href="services.html">خدماتنا</a></li>
-                        <li><a href="articles.html">المقالات</a></li>
-                        <li><a href="support.html">اتصل بنا</a></li>
-                        <li><a class="quote1" href="#">اطلب عرض سعر</a> </li>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                    <span class="fas fa-bars"></span>
+                </button>
+    
+                <div class="collapse navbar-collapse justify-content-md-center" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">الرئيسية</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">من نحن</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="services.html">خدماتنا</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="articles.html">المقالات</a>
+                        </li>    
+                        <li class="nav-item">
+                            <a class="nav-link" href="support.html">اتصل بنا</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link quote" href="get-aquote.html" >اطلب عرض سعر</a>
+                        </li>
                     </ul>
-                </nav>
+                </div>
+    
+                <div class="box">
+                    <a class="cta-button button-white goToQuote" href="get-aquote.html" >اطلب عرض سعر</a>
+                </div>
             </div>
-
-            <nav>
-                <ul>
-                    <li><a href="index.html">الرئيسية</a></li>
-                    <li><a href="about.html">من نحن</a></li>
-                    <li><a href="services.html">خدماتنا</a></li>
-                    <li><a href="articles.html" class="active">المقالات</a></li>
-                    <li><a href="support.html">اتصل بنا</a></li>
-                </ul>
-            </nav>
-
-            <div class="logo" data-aos="fade-down">
-                <img src="assets/IMG/logo.jpg" alt="شركة أبوالحمد للشحن">
-            </div>
-            
-        </div>
+        </nav>
     </header>
+    <!-- end header -->
 
     <div class="buttonUp">
         <i class="fa-solid fa-angles-up"></i>
@@ -67,9 +74,7 @@
         </a>
     </div>
 
-    <section class="main-banner">
-        <div class="banner-image" style="background-image: url('assets/IMG/4581.jpg');"></div>
-    </section>
+    <div class="heros" style="background-image: url('assets/IMG/458122.jpg'); "></div>
     
     <section class="title">
         <div class="container">
@@ -91,14 +96,9 @@
                     </div>
                     <div class="blog-content">
                         <h3 class="blog-title">أهمية الشحن البري في التجارة الدولية</h3>
-                        <p class="blog-meta">نشر في: أكتوبر 10, 2025 | تصنيف: الشحن</p>
                         <p class="blog-excerpt">
                             الشحن البري يعد أحد أقدم وأكثر وسائل النقل الموثوقة في العالم. يتميز بتكلفته المنخفضة مقارنة بالشحن الجوي، مما يجعله الخيار المفضل للبضائع الكبيرة والثقيلة. ومع التطور التكنولوجي، أصبحت الشاحنات الحديثة أكثر كفاءة وأمانًا. تعرف على كيفية الاستفادة من الشحن البري لتعزيز تجارتك الدولية.
                         </p>
-                        <div class="blog-views">
-                            <i class="fas fa-eye"></i>
-                            <span>1,234 مشاهدات</span>
-                        </div>
                         <a href="blog.html" class="read-more cta-button button-white">اقرأ المزيد</a>
                     </div>
                 </div>
@@ -110,14 +110,9 @@
                     </div>
                     <div class="blog-content">
                         <h3 class="blog-title">كيفية تحسين إدارة المستودعات لزيادة الكفاءة</h3>
-                        <p class="blog-meta">نشر في: سبتمبر 25, 2025 | تصنيف: الخدمات اللوجستية</p>
                         <p class="blog-excerpt">
                             إدارة المستودعات الفعالة هي مفتاح نجاح أي عمل لوجستي. من خلال تنظيم المساحات وتقليل الفاقد، يمكنك تحسين الكفاءة وتقليل التكاليف. تعرف على أفضل الممارسات لإدارة المخزون وتقنيات التخزين الذكية التي تساعدك على تحقيق أقصى استفادة من مساحة المستودع.
                         </p>
-                        <div class="blog-views">
-                            <i class="fas fa-eye"></i>
-                            <span>987 مشاهدات</span>
-                        </div>
                         <a href="blog.html" class="read-more cta-button button-white">اقرأ المزيد</a>
                     </div>
                 </div>
@@ -129,14 +124,9 @@
                     </div>
                     <div class="blog-content">
                         <h3 class="blog-title">مزايا الشحن الجوي في نقل البضائع سريعة التلف</h3>
-                        <p class="blog-meta">نشر في: أغسطس 15, 2025 | تصنيف: الشحن الجوي</p>
                         <p class="blog-excerpt">
                             الشحن الجوي هو الحل الأمثل لنقل البضائع سريعة التلف مثل الأغذية والأدوية. يتميز بسرعته الفائقة وقدرته على الوصول إلى أي مكان في العالم خلال ساعات. اكتشف كيف يمكن للشحن الجوي أن ينقذ عملك من الخسائر ويضمن وصول منتجاتك بجودة عالية.
                         </p>
-                        <div class="blog-views">
-                            <i class="fas fa-eye"></i>
-                            <span>1,567 مشاهدات</span>
-                        </div>
                         <a href="blog.html" class="read-more cta-button button-white">اقرأ المزيد</a>
                     </div>
                 </div>
@@ -148,14 +138,9 @@
                     </div>
                     <div class="blog-content">
                         <h3 class="blog-title">تحديات الشحن البحري وكيفية التغلب عليها</h3>
-                        <p class="blog-meta">نشر في: يوليو 5, 2025 | تصنيف: الشحن البحري</p>
                         <p class="blog-excerpt">
                             الشحن البحري يواجه العديد من التحديات مثل التأخير والتقلبات الجوية والتعقيدات الجمركية. ومع ذلك، يظل الخيار الأفضل للبضائع الكبيرة والثقيلة. تعرف على كيفية التغلب على هذه التحديات وضمان وصول بضائعك بسلام وكفاءة.
                         </p>
-                        <div class="blog-views">
-                            <i class="fas fa-eye"></i>
-                            <span>2,345 مشاهدات</span>
-                        </div>
                         <a href="blog.html" class="read-more cta-button button-white">اقرأ المزيد</a>
                     </div>
                 </div>
@@ -207,7 +192,7 @@
                     <li><a href="services.html">خدماتنا</a></li>
                     <li><a href="articles.html">المقالات</a></li>
                     <li><a href="support.html">اتصل بنا</a></li>
-                    <li><a href="#" data-scroll="quote">اطلب عرض سعر</a></li>
+                    <li><a href="get-aquote.html">اطلب عرض سعر</a></li>
                 </ul>
             </div>
 
@@ -242,9 +227,11 @@
     <!-- End Footer -->
 
 
+    <script src="assets/JS/jquery-3.7.1.min (1).js"></script>
+    <!-- Bootstrap JS -->
+    <script src="assets/bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- jQuery -->
-    <script src="assets/JS/jquery-3.7.1.min (1).js"></script>
     <script src="assets/JS/main.js"></script>
 </body>
 </html>

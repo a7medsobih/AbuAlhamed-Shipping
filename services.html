@@ -11,45 +11,52 @@
     <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/bootstrap-5.3.2-dist/css/bootstrap.min.css">
 </head>
 <body>
     <header>
-        <div class="container">
-            <div class="box">
-                <a class="cta-button button-white goToQuote" href="#" data-scroll="quote">اطلب عرض سعر</a>
-            </div>
+        <nav class="navbar navbar-expand-md p-0">
+            <div class="container d-flex justify-content-between align-items-center">
+                
+                <a class="navbar-brand logo" href="index.html">
+                    <img  src="assets/IMG/logo.jpg" alt="logo">
+                </a>
 
-            <!-- أيقونة الـ Hamburger Menu -->
-            <div class="menu-icon" id="menuIcon">
-                <i class="fas fa-bars"></i>
-                <nav class="drop-menu" id="navMenu" data-aos="fade-down">
-                    <ul>
-                        <li><a href="index.html">الرئيسية</a></li>
-                        <li><a href="about.html">من نحن</a></li>
-                        <li><a href="services.html">خدماتنا</a></li>
-                        <li><a href="articles.html">المقالات</a></li>
-                        <li><a href="support.html">اتصل بنا</a></li>
-                        <li><a class="quote1" href="#">اطلب عرض سعر</a> </li>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                    <span class="fas fa-bars"></span>
+                </button>
+    
+                <div class="collapse navbar-collapse justify-content-md-center" id="collapsibleNavbar">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">الرئيسية</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.html">من نحن</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="services.html">خدماتنا</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="articles.html">المقالات</a>
+                        </li>    
+                        <li class="nav-item">
+                            <a class="nav-link" href="support.html">اتصل بنا</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link quote" href="get-aquote.html">اطلب عرض سعر</a>
+                        </li>
                     </ul>
-                </nav>
+                </div>
+    
+                <div class="box">
+                    <a class="cta-button button-white goToQuote" href="get-aquote.html">اطلب عرض سعر</a>
+                </div>
             </div>
-
-            <nav>
-                <ul>
-                    <li><a href="index.html">الرئيسية</a></li>
-                    <li><a href="about.html">من نحن</a></li>
-                    <li><a href="services.html" class="active">خدماتنا</a></li>
-                    <li><a href="articles.html">المقالات</a></li>
-                    <li><a href="support.html">اتصل بنا</a></li>
-                </ul>
-            </nav>
-
-            <div class="logo" data-aos="fade-down">
-                <img src="assets/IMG/logo.jpg" alt="شركة أبوالحمد للشحن">
-            </div>
-            
-        </div>
+        </nav>
     </header>
+    <!-- end header -->
 
     <div class="buttonUp">
         <i class="fa-solid fa-angles-up"></i>
@@ -66,9 +73,7 @@
         </a>
     </div>
 
-    <section class="main-banner">
-        <div class="banner-image" style="background-image: url('assets/IMG/4581.jpg');"></div>
-    </section>
+    <div class="heros" style="background-image: url('assets/IMG/458122.jpg'); "></div>
     
     <section class="title">
         <div class="container">
@@ -91,7 +96,7 @@
                         <p>شحن بحري اقتصادي مع ضمان وصول البضائع بسلام. نقدم حلول شحن بحري متكاملة مع توفير خدمات التخزين والتوزيع. نتعامل مع أكبر الموانئ العالمية.</p>
                     </div>
                     <div class="more">
-                        <a href="sea-freight.html">تعرف أكثر</a>
+                        <a href="sea-freight.html">اقرأ المزيد</a>
                         <i class="fas fa-long-arrow-alt-left"></i>
                     </div>
                 </div>
@@ -103,7 +108,7 @@
                         <p>شحن جوي سريع وموثوق به لأي مكان في العالم. نضمن وصول البضائع بأمان وسرعة مع تتبع دقيق للشحنات. نتعامل مع أكبر شركات الطيران لتقديم أفضل الخدمات.</p>
                     </div>
                     <div class="more">
-                        <a href="air-freight.html">تعرف أكثر</a>
+                        <a href="air-freight.html">اقرأ المزيد</a>
                         <i class="fas fa-long-arrow-alt-left"></i>
                     </div>
                 </div>
@@ -115,7 +120,7 @@
                         <p>نقدم خدمات شحن بري سريعة وآمنة داخل وخارج البلاد. نضمن وصول البضائع في الوقت المحدد وبأعلى معايير الجودة. فريقنا المدرب جيدًا يعمل على توفير أفضل الحلول اللوجستية.</p>
                     </div>
                     <div class="more">
-                        <a href="land-freight.html">تعرف أكثر</a>
+                        <a href="land-freight.html">اقرأ المزيد</a>
                         <i class="fas fa-long-arrow-alt-left"></i>
                     </div>
                 </div>
@@ -127,7 +132,7 @@
                         <p>خدمات تخليص جمركي سريعة ودقيقة بأسعار تنافسية. نضمن إتمام الإجراءات الجمركية في أسرع وقت ممكن. فريقنا المتخصص يعمل على توفير أفضل الحلول الجمركية.</p>
                     </div>
                     <div class="more">
-                        <a href="customs-clearance.html">تعرف أكثر</a>
+                        <a href="customs-clearance.html">اقرأ المزيد</a>
                         <i class="fas fa-long-arrow-alt-left"></i>
                     </div>
                 </div>
@@ -139,7 +144,7 @@
                         <p>خدمات تصدير متكاملة مع توفير الدعم اللوجستي الكامل. نضمن وصول البضائع إلى وجهتها النهائية بأمان وسرعة. نقدم حلول تصدير مخصصة تناسب احتياجاتك.</p>
                     </div>
                     <div class="more">
-                        <a href="export-for-others.html">تعرف أكثر</a>
+                        <a href="export-for-others.html">اقرأ المزيد</a>
                         <i class="fas fa-long-arrow-alt-left"></i>
                     </div>
                 </div>
@@ -173,7 +178,7 @@
                 </div>
             </div>
             <div class="cta">
-                <a href="#quote" class="cta-button">اطلب عرض سعر مخصص</a>
+                <a href="get-aquote.html" class="cta-button">اطلب عرض سعر مخصص</a>
             </div>
         </div>
     </section>
@@ -220,7 +225,7 @@
                     <li><a href="services.html">خدماتنا</a></li>
                     <li><a href="articles.html">المقالات</a></li>
                     <li><a href="support.html">اتصل بنا</a></li>
-                    <li><a href="#">اطلب عرض سعر</a></li>
+                    <li><a href="get-aquote.html">اطلب عرض سعر</a></li>
                 </ul>
             </div>
 
@@ -255,9 +260,11 @@
     <!-- End Footer -->
 
 
+    <script src="assets/JS/jquery-3.7.1.min (1).js"></script>
+    <!-- Bootstrap JS -->
+    <script src="assets/bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- jQuery -->
-    <script src="assets/JS/jquery-3.7.1.min (1).js"></script>
     <script src="assets/JS/main.js"></script>
 </body>
 </html>

@@ -7,7 +7,6 @@
     <link rel="icon" type="image/png" href="assets/IMG/icon.png"/>
     <link rel="stylesheet" href="assets/CSS/style.css">
     <link rel="stylesheet" href="assets/CSS/services-style.css">
-    <link rel="stylesheet" href="assets/CSS/support.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap">
     <!-- font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -43,16 +42,16 @@
                             <a class="nav-link" href="articles.html">المقالات</a>
                         </li>    
                         <li class="nav-item">
-                            <a class="nav-link active" href="support.html">اتصل بنا</a>
+                            <a class="nav-link" href="support.html">اتصل بنا</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link quote" href="get-aquote.html">اطلب عرض سعر</a>
+                            <a class="nav-link quote active" href="#" data-scroll="quote">اطلب عرض سعر</a>
                         </li>
                     </ul>
                 </div>
     
                 <div class="box">
-                    <a class="cta-button button-white goToQuote" href="get-aquote.html">اطلب عرض سعر</a>
+                    <a class="cta-button button-white goToQuote" href="#" data-scroll="quote">اطلب عرض سعر</a>
                 </div>
             </div>
         </nav>
@@ -75,98 +74,58 @@
     </div>
 
     <div class="heros" style="background-image: url('assets/IMG/458122.jpg'); "></div>
-
+    
     <section class="title">
         <div class="container">
-            <h1>اتصل بنا</h1>
-            <div class="content">
-                <p>نحن هنا لمساعدتك! املأ النموذج وسنرد عليك في أقرب وقت.</p>
+            <h1>اطلب عرض سعر</h1>
+                <div class="content">
+                    <p>املأ النموذج أدناه وسنقوم بالاتصال بك لتقديم عرض سعر لشحنتك.</p>
+                </div>
             </div>
         </div>
     </section>
-    
-    <section class="contact-section">
+
+    <!-- Start Request a Quote Section -->
+    <section class="request-quote-section quote py-5">
         <div class="container">
-            <div class="contact-content">
-                    
-                <!-- form -->
-                <div class="form-container">
-                    <h2>راسلنا</h2>
-                    <form class="contact-form" action="/submit-contact" method="POST">
-                        
-                        <div class="form-group">
-                            <label for="name">الاسم الكامل</label>
-                            <input type="text" id="name" name="name" placeholder="أدخل اسمك الكامل" required>
-                        </div>
-    
-                        <div class="form-group">
-                            <label for="email">البريد الإلكتروني</label>
-                            <input type="email" id="email" name="email" placeholder="أدخل بريدك الإلكتروني" required>
-                        </div>
-    
-                        <div class="form-group">
-                            <label for="phone">رقم الهاتف</label>
-                            <input type="number" id="phone" name="phone" placeholder="أدخل رقم هاتفك" required>
-                        </div>
-    
-                        <div class="form-group">
-                            <label for="inquiry">نوع الاستفسار</label>
-                            <select id="inquiry" name="inquiry" required>
-                                <option value="" disabled selected>اختر نوع الاستفسار</option>
-                                <option value="shipping">الشحن</option>
-                                <option value="support">الدعم الفني</option>
-                                <option value="partnership">الشراكة</option>
-                                <option value="other">أخرى</option>
-                            </select>
-                        </div>
-    
-                        <div class="form-group">
-                            <label for="message">الرسالة</label>
-                            <textarea id="message" name="message" placeholder="أدخل رسالتك هنا"></textarea>
-                        </div>
-    
-                        <a type="submit" class="cta-button">إرسال</a>
-                    </form>
+
+            <form class="quote-form" action="/submit-quote" method="POST">
+                <div class="form-group">
+                    <label for="name">الاسم الكامل</label>
+                    <input type="text" id="name" name="name" placeholder="أدخل اسمك الكامل" required>
                 </div>
 
-               <!-- contact -->
-                <div class="contact-info">
-                    <h2>تواصل معنا</h2>
-                    <div class="info-item">
-                        <i class="fas fa-phone"></i>
-                        <span>01015805018 - 01070295044</span>
-                    </div>
-                    <div class="info-item">
-                        <i class="fab fa-whatsapp"></i>
-                        <span>01015805018</span>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-envelope"></i>
-                        <span>omar_apoalhamed@yahoo.com</span>
-                    </div>
-                    <div class="info-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>15 شارع متولي الشعراوي، الحي العاشر، مدينة نصر</span>
-                    </div>
-
-                    <!-- map -->
-                    <div class="map-container">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3454.123456789012!2d31.12345678901234!3d30.123456789012345!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzDCsDA3JzI0LjQiTiAzMcKwMDcnMjQuNCJF!5e0!3m2!1sen!2seg!4v1234567890123!5m2!1sen!2seg"
-                            width="100%"
-                            height="300"
-                            style="border:0; border-radius: 10px;"
-                            allowfullscreen=""
-                            loading="lazy">
-                        </iframe>
-                    </div>
+                <div class="form-group">
+                    <label for="email">البريد الإلكتروني</label>
+                    <input type="email" id="email" name="email" placeholder="أدخل بريدك الإلكتروني" required>
                 </div>
-            </div>
-            <p class="additional-text">
-                يسعدنا أن نلتقي رسائلكم واتصالاتكم طوال اليوم على مدار الأسبوع، لتلقي طلبات الشحن أو للشكاوي والمقترحات.
-            </p>
+
+                <div class="form-group">
+                    <label for="phone">رقم الهاتف</label>
+                    <input type="number" id="phone" name="phone" placeholder="أدخل رقم هاتفك" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="service">نوع الخدمة المطلوبة</label>
+                    <select id="service" name="service" required>
+                        <option value="" disabled selected>اختر نوع الخدمة</option>
+                        <option value="shipping">الشحن البري</option>
+                        <option value="air">الشحن الجوي</option>
+                        <option value="sea">الشحن البحري</option>
+                        <option value="customs">التخليص الجمركي</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">تفاصيل إضافية</label>
+                    <textarea id="message" name="message" placeholder="أدخل تفاصيل إضافية عن شحنتك"></textarea>
+                </div>
+
+                <a type="submit" class="cta-button">إرسال الطلب</a>
+            </form>
         </div>
     </section>
+    <!-- End Request a Quote Section -->
 
     <!-- Start Footer -->
     <footer class="footer">
@@ -209,7 +168,7 @@
                     <li><a href="services.html">خدماتنا</a></li>
                     <li><a href="articles.html">المقالات</a></li>
                     <li><a href="support.html">اتصل بنا</a></li>
-                    <li><a href="get-aquote.html">اطلب عرض سعر</a></li>
+                    <li><a href="#" data-scroll="quote">اطلب عرض سعر</a></li>
                 </ul>
             </div>
 
