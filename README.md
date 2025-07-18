@@ -1,6 +1,6 @@
 # 🚢 Abu Alhamed Shipping 
 
-A responsive company website designed for a shipping and logistics business.  
+A responsive website designed for a shipping and logistics business.  
 The site includes sections for company overview, services, and contact details, providing a clean and professional layout.
 
 ## 🚀 Live Demo
